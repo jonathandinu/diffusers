@@ -273,7 +273,7 @@ def parse_args():
 
 
 def main(args):
-    logging_dir = os.path.join(args.output_dir, args.logging_dir)
+    logging_dir = args.logging_dir
     accelerator_project_config = ProjectConfiguration(project_dir=args.output_dir, logging_dir=logging_dir)
 
     kwargs = InitProcessGroupKwargs(timeout=timedelta(seconds=7200))  # a big number for high resolution or big dataset
